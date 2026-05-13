@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B3A4A">
+  <title>DECLOQUEMENT ERIC PIERRE</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root {
+      --ink: #182027;
+      --navy: #0b3a4a;
+      --deep: #07111e;
+      --copper: #b98046;
+      --teal: #237a86;
+      --paper: #f6f2ea;
+      --line: #dfd2c0;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: rgba(246, 242, 234, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav,
+    .section {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--copper);
+      color: #211407;
+      font-weight: 900;
+      border: 1px solid rgba(33, 20, 7, 0.14);
+    }
+
+    .hero {
+      min-height: calc(100vh - 68px);
+      display: grid;
+      align-items: end;
+      background:
+        linear-gradient(90deg, rgba(7, 17, 30, 0.94), rgba(7, 17, 30, 0.58) 58%, rgba(7, 17, 30, 0.24)),
+        url("featured.png") center / cover no-repeat;
+      color: white;
+    }
+
+    .hero .section {
+      padding: clamp(72px, 12vh, 132px) 0 56px;
+    }
+
+    .eyebrow {
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: var(--copper);
+      color: #211407;
+      font-weight: 900;
+      font-size: 0.78rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin-bottom: 14px;
+      font-size: clamp(2.45rem, 7vw, 5.9rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: clamp(1.03rem, 2vw, 1.22rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-color: rgba(255, 255, 255, 0.34);
+    }
+
+    main .section {
+      padding: 64px 0;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: #53606a;
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .card {
+      min-height: 190px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: white;
+      background: var(--navy);
+      font-weight: 900;
+    }
+
+    .card:nth-child(2) .icon {
+      background: var(--teal);
+    }
+
+    .card:nth-child(3) .icon {
+      background: var(--copper);
+      color: #211407;
+    }
+
+    .card h3 {
+      margin: 18px 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .card p,
+    .steps p {
+      color: #53606a;
+      margin-bottom: 0;
+    }
+
+    .band {
+      background: #102836;
+      color: white;
+    }
+
+    .band .lead,
+    .band p {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .step {
+      border-top: 3px solid var(--copper);
+      padding-top: 18px;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      color: #53606a;
+    }
+
+    footer .section {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+
+    @media (max-width: 780px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .hero {
+        min-height: 720px;
+      }
+
+      .grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#">DECLOQUEMENT ERIC PIERRE</a>
+        <div class="nav-links">
+          <a href="#workflow">Workflow</a>
+          <a href="#privacy">Privacy</a>
+          <a class="button" href="mailto:support@decloquementericpierre.com">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="section">
+        <div class="eyebrow">PRIVATE ANDROID WORKSPACE</div>
+        <h1>DECLOQUEMENT ERIC PIERRE</h1>
+        <p>Operations-focused task management, patient records, audit logs, and revenue analytics for daily business control on a mobile phone.</p>
+        <div class="hero-actions">
+          <a class="button" href="#workflow">View workflow</a>
+          <a class="button secondary" href="#privacy">Privacy summary</a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="workflow" class="section">
+        <h2>Daily operations without cloud overhead</h2>
+        <p class="lead">The Android app is built around repeated operational work: create tasks, review patient follow-ups, track revenue, and keep an audit trail of important changes.</p>
+        <div class="grid">
+          <article class="card">
+            <div class="icon">T</div>
+            <h3>Task command list</h3>
+            <p>Capture owners, priorities, and due times for the actions that keep the day moving.</p>
+          </article>
+          <article class="card">
+            <div class="icon">P</div>
+            <h3>Patient records</h3>
+            <p>Save record codes, next actions, status, notes, and review flags for local follow-up.</p>
+          </article>
+          <article class="card">
+            <div class="icon">R</div>
+            <h3>Revenue analytics</h3>
+            <p>Separate collected and pending revenue so management can see the current position quickly.</p>
+          </article>
+          <article class="card">
+            <div class="icon">A</div>
+            <h3>Audit history</h3>
+            <p>Every important local action is reflected in an audit log for review and accountability.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="privacy" class="band">
+        <div class="section">
+          <h2>Designed for local control</h2>
+          <p class="lead">The app does not use accounts, analytics, advertising identifiers, cloud sync, network APIs, or Android runtime permissions. Records remain in local app storage until the app data is removed or the app is uninstalled.</p>
+          <div class="steps">
+            <div class="step">
+              <h3>1. Add records</h3>
+              <p>Create task, patient, and revenue entries directly on the phone.</p>
+            </div>
+            <div class="step">
+              <h3>2. Review status</h3>
+              <p>Use summaries and lists to find overdue actions, flagged records, and pending revenue.</p>
+            </div>
+            <div class="step">
+              <h3>3. Keep accountability</h3>
+              <p>Audit events provide a private timeline of updates made inside the app.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="section">
+        <span>DECLOQUEMENT ERIC PIERRE</span>
+        <a href="mailto:support@decloquementericpierre.com">support@decloquementericpierre.com</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
