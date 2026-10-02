@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "applications": {
+    "com.taziggg100.decloquement_eric_pierre": {
+      "title": "DECLOQUEMENT ERIC PIERRE",
+      "short_description": "Manage tasks, patient records, audits, and revenue on one private Android...",
+      "full_description": "DECLOQUEMENT ERIC PIERRE helps small operations teams keep daily business work organized without accounts or cloud services. Track tasks, patient records, revenue items, and audit activity from a focused phone interface.\n\nThe app is designed for quick repeated use during the working day. Add operational actions, review patient follow-ups, monitor collected and pending revenue, and keep a clear local audit trail of changes.",
+      "source_screenshots": [
+        "docs/screens/1.png",
+        "docs/screens/2.png",
+        "docs/screens/3.png"
+      ],
+      "generated_from": "existing repository listing metadata and README",
+      "generated_at": "2026-10-02T21:24:28.293256+00:00"
+    }
+  }
+}
