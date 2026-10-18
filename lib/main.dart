@@ -15,8 +15,8 @@ class DeploOperationsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const primary = Color(0xFF0B3A4A);
-    const secondary = Color(0xFFB98046);
+    const primary = Color(0xFF1565C0);
+    const secondary = Color(0xFF558B2F);
     const surface = Color(0xFFF6F2EA);
 
     final scheme =
