@@ -1,4 +1,4 @@
-name: decloquement_eric_pierre
+name: elequent
 description: "A local operations workspace for tasks, patient records, audits, and revenue tracking."
 publish_to: 'none'
 
@@ -28,4 +28,6 @@ flutter_launcher_icons:
   android: true
   ios: false
   image_path: "docs/icon.png"
+  adaptive_icon_foreground: docs/icon.png
+  adaptive_icon_background: "#E23DFF"
   min_sdk_android: 23

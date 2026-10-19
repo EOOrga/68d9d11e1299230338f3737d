@@ -29,7 +29,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.taziggg100.decloquement_eric_pierre"
+        applicationId = "com.taziggg10.elequent"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
